@@ -46,10 +46,10 @@ public class PersonBuilder {
     }
 
     public Person build() {
-        if (this.name.isEmpty()) {
+        if (this.name == null || this.name.isEmpty()) {
             throw new IllegalStateException("Name is empty");
         }
-        if (this.surname.isEmpty()) {
+        if (this.surname == null || this.surname.isEmpty()) {
             throw new IllegalStateException("Surname is empty");
         }
         Person person;
